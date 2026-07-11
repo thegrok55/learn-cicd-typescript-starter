@@ -17,9 +17,12 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: 22
+      
+      - name: install pnpn
+        run: npm install -g pnpm@latest-11
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm ci
     
       - name: Run unit test
-        run : npm run test
+        run : pnpm run test
