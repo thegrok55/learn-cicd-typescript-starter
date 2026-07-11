@@ -18,8 +18,11 @@ jobs:
         with:
           node-version: 22
       
-      - name: install pnpn
+      - name: install pnpm
         run: npm install -g pnpm@latest-11
+
+      - name: Approve build
+        run: pnpm approve-builds --all
 
       - name: Install dependencies
         run: pnpm ci
