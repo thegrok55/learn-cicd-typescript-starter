@@ -30,11 +30,6 @@
     "express": "^4.21.1",
     "uuid": "^11.0.3"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
-  },
   "prettier": {
     "printWidth": 80,
     "useTabs": false,
