@@ -21,11 +21,9 @@ jobs:
       - name: install pnpm
         run: npm install -g pnpm@latest-11
 
-      - name: Approve build
-        run: pnpm approve-builds --all
 
       - name: Install dependencies
-        run: pnpm ci
+        run: pnpm install --frozen-lockfile
     
       - name: Run unit test
         run : pnpm run test
