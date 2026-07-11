@@ -13,7 +13,7 @@ describe("Testing the getAPIKey function",
  ()=>{
   
   test("Authorization header is defined",()=>{
-    expect(getAPIKey(httpHeaderCorrect)).toEqual("qwer")
+    expect(getAPIKey(httpHeaderCorrect)).toEqual("asdfasdfasdf")
   })
 
   test("Authorization header is null",()=>{
