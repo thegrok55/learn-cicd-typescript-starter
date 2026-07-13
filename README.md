@@ -1,3 +1,5 @@
+![testing badge](https://github.com/thegrok55/learn-cicd-typescript-starter/actions/workflows/ci.yml/badge.svg)
+
 # learn-cicd-typescript-starter (Notely)
 
 This repo contains the typescript starter code for the "Notely" application for the "Learn CICD" course on [Boot.dev](https://boot.dev).
@@ -17,6 +19,10 @@ Run the server:
 ```bash
 npm install
 npm run dev
+```
+
+```
+ayman
 ```
 
 _This starts the server in non-database mode._ It will serve a simple webpage at `http://localhost:8080`.
