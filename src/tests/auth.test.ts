@@ -2,21 +2,18 @@ import { describe, expect, test } from "vitest";
 import { getAPIKey } from "../api/auth.ts";
 import { IncomingHttpHeaders } from "http";
 
-const httpHeaderCorrect : IncomingHttpHeaders = {
- authorization : "ApiKey asdfasdfasdf"
-}
+const httpHeaderCorrect: IncomingHttpHeaders = {
+  authorization: "ApiKey asdfasdfasdf",
+};
 
-const httpHeaderWrong : IncomingHttpHeaders = {}
+const httpHeaderWrong: IncomingHttpHeaders = {};
 
+describe("Testing the getAPIKey function", () => {
+  test("Authorization header is defined", () => {
+    expect(getAPIKey(httpHeaderCorrect)).toEqual("asdfasdfasdf");
+  });
 
-describe("Testing the getAPIKey function",
- ()=>{
-  
-  test("Authorization header is defined",()=>{
-    expect(getAPIKey(httpHeaderCorrect)).toEqual("asdfasdfasdf")
-  })
-
-  test("Authorization header is null",()=>{
-    expect(getAPIKey(httpHeaderWrong)).toBeNull()
-  })
- })
+  test("Authorization header is null", () => {
+    expect(getAPIKey(httpHeaderWrong)).toBeNull();
+  });
+});
