@@ -13,6 +13,8 @@ jobs:
     steps:
       name: check
       run: npm run format:check
+
+      
   tests:
     name: Tests
     runs-on: ubuntu-latest
